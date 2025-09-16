@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  frontend_v1:
+    build: ./
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app  # Code volume
+      - /home/ubuntu/frontend-data:/app-data  # Bind mount to a directory on the host machine
+    restart: always
+    env_file:
+     - ./.env
+
+
+
+#old implementation
+
+# version: '3.8'
+
+# services:
+#   app:
+#     build: .
+#     volumes:
+#       - .:/app  # Code volume
+#       - persistent-data:/app-data  # Data volume
+#     ports:
+#       - "3000:3000"
+#    # env_file:
+#      # - ./.env
+#     restart: always
+
+# volumes:
+#   persistent-data:
+#     driver: local  # Local storage driver
+

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	font-size: 62.5%;
+}
+
+.marker {
+	background-image: url("/brush2.svg");
+	background-color: transparent;
+	padding: 10px 15px 10px 15px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+}
