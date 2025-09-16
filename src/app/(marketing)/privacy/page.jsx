@@ -3,9 +3,11 @@ import React from "react";
 export default function page() {
 	return (
 		<section className="bg-[#F7F7FF] pt-[90px]">
-			<div className="p-16">
+			<div className="p-5 md:p-16">
 				<div className="flex flex-col items-center justify-center px-8 md:px-24 h-[300px] bg-[url('/contact.png')] bg-primary">
-					<h1 className="text-white font-bold text-[6rem]">Privacy Policy</h1>
+					<h1 className="text-white font-bold text-[3rem] md:text-[6rem]">
+						Privacy Policy
+					</h1>
 					<span className="text-white text-3xl">
 						Effective Date: 4th, September 2025
 					</span>
@@ -280,7 +282,7 @@ export default function page() {
 							<a
 								href="mailto:eldoradosmartpayment@gmail.com"
 								className="text-textBlack underline">
-								eldoradosmartpayment@gmail.com
+								info@eldoradosp.com
 							</a>
 						</p>
 					</div>
