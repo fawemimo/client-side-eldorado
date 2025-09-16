@@ -15,7 +15,7 @@
 		"autoprefixer": "10.4.19",
 		"axios": "^1.7.2",
 		"formik": "^2.4.6",
-		"framer-motion": "^11.2.6",
+		"framer-motion": "^12.23.12",
 		"lottie-web": "^5.12.2",
 		"next": "13.4.19",
 		"nextjs-toploader": "^1.6.12",
