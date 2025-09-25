@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function Accordion() {
+export default function Accordion({ title, description }) {
 	const [open, setOpen] = useState(false);
 
 	return (
@@ -11,7 +11,7 @@ export default function Accordion() {
 				className={`p-5 h-[50px]  rounded-lg flex items-center justify-between ${
 					!open ? "border bg-white " : "bg-primary text-white"
 				}`}>
-				<p className="text-2xl">Lorem ipsum dolor sit amet.</p>
+				<p className="text-2xl">{title}</p>
 				{!open && (
 					<svg
 						width="16"
@@ -49,16 +49,7 @@ export default function Accordion() {
 				className={` p-5 bg-white transition-all duration-300 overflow-hidden ${
 					open ? "scale-y-100 origin-top" : "scale-y-0 origin-bottom"
 				} `}>
-				<span className="text-2xl">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ut ab
-					fugit laborum animi at corrupti exercitationem officia quo dolorum
-					inventore aut quia esse necessitatibus, numquam officiis velit
-					doloribus minus! Lorem, ipsum dolor sit amet consectetur adipisicing
-					elit. Amet, ad nostrum quidem repellendus soluta deserunt consectetur
-					hic! Delectus sunt sit esse fuga tempore accusantium quisquam
-					perferendis, velit nisi inventore quod modi veritatis vero molestias,
-					incidunt tempora magnam optio quis molestiae.
-				</span>
+				<span className="text-2xl">{description}</span>
 			</div>
 		</div>
 	);

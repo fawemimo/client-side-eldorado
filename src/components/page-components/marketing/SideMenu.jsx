@@ -88,18 +88,6 @@ export default function SideMenu() {
 								variants={itemVariants}>
 								<Link
 									className={`text-[3.5rem] font-bold ${
-										isServices ? "text-accent" : "text-white"
-									}`}
-									href={"/services"}>
-									Services
-								</Link>
-							</motion.li>
-							<motion.li
-								className="list-none"
-								onClick={() => setOpen(false)}
-								variants={itemVariants}>
-								<Link
-									className={`text-[3.5rem] font-bold ${
 										isFAQ ? "text-accent" : "text-white"
 									}`}
 									href={"/faq"}>
@@ -118,21 +106,6 @@ export default function SideMenu() {
 									Contact us
 								</Link>
 							</motion.li>
-							{/* <motion.li
-								className="list-none flex items-center gap-10"
-								onClick={() => setOpen(false)}
-								variants={itemVariants}>
-								<Link
-									href="/auth/signin"
-									className="text-[1.6rem] font-semibold text-white w-1/2 h-[50px] bg-secondary flex items-center justify-center rounded-lg">
-									Login
-								</Link>
-								<Link
-									href="/auth/signup"
-									className="text-[1.6rem] font-semibold text-white w-1/2 h-[50px] bg-accent flex items-center justify-center rounded-lg">
-									Sign up
-								</Link>
-							</motion.li> */}
 						</motion.nav>
 					</div>
 				</motion.div>

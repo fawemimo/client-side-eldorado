@@ -9,22 +9,13 @@ import GooglePlayStore from "@/components/shared/icons/GooglePlayStore";
 import SideMenu from "@/components/page-components/marketing/SideMenu";
 import P2PTransfers from "@/components/page-components/marketing/P2PTransfers";
 import Savings from "@/components/page-components/marketing/Savings";
+import AppStoreActions from "@/components/shared/AppStoreActions";
 
 export default function page() {
 	return (
 		<>
 			<section className="relative h-[600px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
-				<div className="w-full h-[600px] md:h-[600px] lg:h-[700px] xl:h-[800px] absolute z-[4] overflow-hidden bg-white">
-					<div className="w-full h-full absolute z-[3]">
-						{/* <Image
-							src={"/ink_splash.svg"}
-							width={1850}
-							height={861}
-							alt="Eldorado"
-							priority={true}
-							className="w-full h-full object-cover"
-						/> */}
-					</div>
+				<div className="w-full h-[600px] md:h-[600px] lg:h-[700px] xl:h-[800px] absolute z-[4] overflow-hidden bg-[#112247]">
 					<div className="w-full absolute h-full z-[2]">
 						<Image
 							src={"/map.svg"}
@@ -35,68 +26,27 @@ export default function page() {
 							className="w-full h-full object-cover"
 						/>
 					</div>
-					{/* <Image
-						src={"/hero-rec.svg"}
-						width={1850}
-						height={861}
-						alt="Eldorado"
-						className="w-full h-full object-cover"
-						priority={true}
-					/> */}
 				</div>
-				<div className="w-full h-[600px] md:h-[600px] lg:h-[700px] xl:h-[800px] absolute flex items-center z-[5] overflow-hidden">
-					<div className="w-full lg:w-[90%] xl:w-[55%] min-[1440px]:w-[50%]  px-5 md:px-0 md:pl-20">
-						<h1 className="text-[4rem] md:text-[6rem] lg:text-[6rem] xl:text-[6.5rem] md:leading-[7.5rem] font-montserrat tracking-tight font-black  text-primary max-[360px]:mb-0 mb-5 md:mb-0">
-							Smart, Simple & Easy Payment{" "}
-							<mark className="marker bg-transparent text-[#154AA1] text-[4rem] md:text-[6rem] tracking-normal font-montserrat font-black">
+				<div className="w-full h-[600px] md:h-[600px] lg:h-[700px] xl:h-[800px] absolute flex items-center pt-20 lg:pt-0 z-[5] overflow-hidden">
+					<div className="w-full lg:w-[90%] xl:w-[55%] min-[1440px]:w-[60%]  px-5 md:px-20 ">
+						<h1 className="text-[4rem] md:text-[6rem] lg:text-[6rem] xl:text-[6.5rem] md:leading-[7.5rem] font-montserrat tracking-tight font-medium  text-white max-[360px]:mb-0 mb-5 md:mb-0">
+							<span className="text-[#f5c945] font-bold">
+								Smart, Reliable & Secure
+							</span>{" "}
+							Payments for Everyone{" "}
+							{/* <span className="text-[#f5c945] font-bold">Possibilities</span> */}
+							{/* <mark className="marker bg-transparent text-[#112247] text-[4rem] md:text-[6rem] tracking-normal font-montserrat font-black">
 								Possibilities
-							</mark>
+							</mark> */}
 						</h1>
-						<div className="relative">
-							{/* <Image
-								src={"/brush2.svg"}
-								priority={true}
-								width={826}
-								height={237}
-								alt="Eldorado"
-								className="absolute md:hidden  z-[-1] max-[600px]:left-[-7px] max-[768px]:left-[-40px] max-[820px]:left-[-60px] lg:left-[-90px] xl:left-[-20px] top-[-65px] md:top-[5px] max-[360px]:max-w-full max-w-[90%]  md:w-full xl:w-full h-[207px] object-contain"
-							/> */}
-							{/* <Image
-								src={"/brush1.svg"}
-								priority={true}
-								width={826}
-								height={237}
-								alt="Eldorado"
-								className="absolute hidden md:block lg:hidden  z-[-1] max-[600px]:left-[-7px] max-[768px]:left-[-40px] max-[820px]:left-[-60px] lg:left-[-90px] xl:left-[-20px] top-[-50px] md:top-[5px]  md:w-full xl:w-full h-[237px] object-contain"
-							/> */}
-							{/* <Image
-								src={"/brush.svg"}
-								priority={true}
-								width={826}
-								height={237}
-								alt="Eldorado"
-								className="absolute hidden lg:block  z-[-1] max-[600px]:left-0 max-[768px]:left-[-40px] max-[820px]:left-[-60px] lg:left-[-100px] xl:left-[-20px] min-[1440px]:left-[-20px] min-[1400px]:left-[-50px] top-[-50px] md:top-[5px]  md:w-full xl:w-full h-[237px] object-contain"
-							/> */}
-						</div>
-						<p className="text-2xl md:text-3xl text-[#1e1e1e] font-normal mt-10 md:mt-10 lg:mt-10 xl:mt-8 lg:w-[90%] xl:w-[70%] leading-[2.5rem] xl:leading-[3rem]">
-							Unlocking limitless payment opportunities for Business
-							enterprises, individuals, small businesses, emerging markets, and
-							startups.
+						<p className="text-2xl md:text-[17px] text-white mt-5 md:mt-10 lg:mt-10 xl:mt-3 lg:w-[90%] xl:w-[70%] leading-relaxed">
+							We provide a comprehensive payment platform that enables
+							individuals and businesses to transfer funds, pay bills, and
+							manage financial transactions with ease.
 						</p>
-						<div className="flex items-center mt-10  md:mt-10 lg:mt-12 xl:mt-10 gap-12">
-							<Link
-								className="font-bold text-white w-[200px] h-[57px] rounded-xl bg-[#DBB42C] text-2xl flex items-center justify-center"
-								href={"/auth/signup"}>
-								Create account
-							</Link>
-							<Link
-								className="font-bold bg-primary text-white w-[200px] h-[57px] rounded-xl  text-2xl flex items-center justify-center"
-								href={"/"}>
-								Get the app
-							</Link>
-						</div>
+						<AppStoreActions />
 					</div>
-					<div className="hidden xl:flex justify-end z-[5]">
+					<div className="hidden xl:flex justify-end z-[5] pr-20">
 						<Image
 							src={"/image 3.png"}
 							priority={true}
@@ -108,176 +58,122 @@ export default function page() {
 					</div>
 				</div>
 			</section>
-			<section className="bg-[#f8f8f8] py-16 md:py-24 flex flex-col items-center gap-y-6">
-				<h2 className="md:px-12 lg:px-0 text-[3rem] md:text-[4rem] lg:text-[5.5rem] xl:text-[5rem] font-black text-[#1C4894] text-center w-[60%]">
-					Transact anywhere easily, with Eldorado Smart Payment.
+			<section className="w-full py-16 md:py-24 flex flex-col items-center justify-center gap-y-3">
+				<h2 className="text-[2.5rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[4.5rem] font-bold text-[#112247] text-center w-[90%] md:w-[70%] lg:w-[60%]">
+					Seamless Transactions, Every Time
 				</h2>
-				<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.5rem] text-center w-[95%] md:w-[95%] lg:w-[90%] xl:w-[80%]">
-					{`The comprehensive fin-tech platform that goes beyond traditional
-					banking to offer a seamless suite of services tailored to meet all
-					your financial needs. We are your trusted partner for seamless and
-					secure financial management. Here's how we're transforming the
-					landscape of personal and business finance:`}
+				<p className="w-[80%] md:w-[70%] lg:w-[40%] text-2xl md:text-3xl text-[#787878] text-center">
+					Our platform ensures that sending money and paying bills is simple and
+					dependable.
 				</p>
 			</section>
-			<section className="w-full flex flex-col md:flex-row items-center px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-26">
-				<div className="w-full md:w-[50%]">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] text-primary font-bold">
-						P2P Transactions
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem]">
-						You can effortlessly send and receive funds to friends, family, or
-						business associates with just a few taps on your device. our
-						platform ensures fast, secure, and cost-effective transactions,
-						anytime, anywhere.
+			<section className="bg-[#fafaf4] py-12 flex gap-y-5 flex-col md:flex-row items-center justify-center">
+				<div className="w-[90%] md:w-[40%]">
+					<h6 className="text-[2.5rem] lg:text-[3rem] xl:text-[4rem] min-[1281px]:text-[4.5rem] font-semibold text-[#112247] md:w-1/2 leading-tight">
+						Funds Transfers
+					</h6>
+					<p className="text-[1.7rem] font-epilogue text-[#1E1E1E] lg:w-[70%] mt-5">
+						Seamlessly transfer money to other users on the platform or to any
+						Nigerian bank account, with the assurance of speed, security, and
+						reliability.
 					</p>
 				</div>
-				<div className="w-full md:w-[50%] order-first md:order-none">
-					<P2PTransfers />
-				</div>
-			</section>
-			<section className="w-full flex flex-col md:flex-row items-center gap-12 px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-24">
-				<div className="w-full md:w-[50%]">
+				<div className=" flex items-center justify-center">
 					<Image
-						src={"/virtual-cards.png"}
-						width={714}
-						height={437}
+						src={"/transfer-mob.png"}
+						width={225}
+						height={469}
 						alt="Eldorado"
+						className="max-w-[75%] lg:max-w-[80%] xl:max-w-full"
 					/>
 				</div>
-				<div className="w-full md:w-[50%]">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] text-primary font-bold md:text-right">
-						Virtual Cards
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem] md:text-right">
-						Enjoy enhanced security and convenience with our virtual card
-						feature. Create virtual cards instantly for online purchases,
-						subscription services, or one-time transactions.
+			</section>
+
+			<section className="py-12 flex flex-col gap-y-5 md:flex-row items-center justify-center">
+				<div className="order-last md:order-none w-[90%] md:w-[40%] flex gap-y-5  items-center justify-center">
+					<Image
+						src={"/transfer-mob.png"}
+						width={225}
+						height={469}
+						alt="Eldorado"
+						className="max-w-[55%] lg:max-w-[45%] xl:max-w-full"
+					/>
+				</div>
+				<div className="w-[90%] md:w-[40%]">
+					<h6 className="text-[2.5rem] lg:text-[3rem] xl:text-[4rem] min-[1281px]:text-[4.5rem] font-semibold text-[#112247] md:w-1/2 leading-tight">
+						Airtime and Data
+					</h6>
+					<p className="text-[1.7rem] font-epilogue text-[#1E1E1E] lg:w-[70%] mt-5">
+						Recharge Conveniently purchase airtime and data bundles across all
+						major mobile networks, anytime and anywhere.
 					</p>
 				</div>
 			</section>
-			<section className="w-full flex flex-col md:flex-row items-center px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-24">
-				<div className="w-full md:w-[50%]">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] text-primary font-bold">
-						Savings Account
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem]">
-						{`Whether you're saving for a major purchase, an emergency fund, or
-						retirement, our platform offers competitive interest rates, flexible
-						terms, to help you reach your goals faster.`}
+
+			<section className="bg-[#fafaf4] py-12 flex gap-y-5 flex-col md:flex-row items-center justify-center">
+				<div className="w-[90%] md:w-[40%]">
+					<h6 className="text-[2.5rem] lg:text-[3rem] xl:text-[4rem] min-[1281px]:text-[4.5rem] font-semibold text-[#112247] md:w-1/2 leading-tight">
+						Bill Payments
+					</h6>
+					<p className="text-[1.7rem] font-epilogue text-[#1E1E1E] lg:w-[70%] mt-5">
+						Settle electricity, television, internet, and other utility bills
+						with ease, all from a single secure platform.
 					</p>
 				</div>
-				<div className="w-full md:w-[50%] order-first md:order-none">
-					<Savings />
+				<div className=" flex items-center justify-center">
+					<Image
+						src={"/transfer-mob.png"}
+						width={225}
+						height={469}
+						alt="Eldorado"
+						className="max-w-[75%] lg:max-w-[80%] xl:max-w-full"
+					/>
 				</div>
 			</section>
-			<section className="w-full flex flex-col md:flex-row items-center gap-12 px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-24">
-				<div className="w-full md:w-[50%]">
-					<CrossBorderTution />
+
+			<section className="py-12 flex flex-col gap-y-5 md:flex-row items-center justify-center">
+				<div className="order-last md:order-none w-[90%] md:w-[40%] flex gap-y-5  items-center justify-center">
+					<Image
+						src={"/transfer-mob.png"}
+						width={225}
+						height={469}
+						alt="Eldorado"
+						className="max-w-[55%] lg:max-w-[45%] xl:max-w-full"
+					/>
 				</div>
-				<div className="w-full md:w-[50%]">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem]  font-bold md:text-right">
-						Cross-border <span className="text-primary">Fees & Tuition</span>{" "}
-						Payments
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem] md:text-right">
-						Enjoy enhanced security and convenience with our virtual card
-						feature. Create virtual cards instantly for online purchases,
-						subscription services, or one-time transactions.
+				<div className="w-[90%] md:w-[50%] lg:w-[45%]">
+					<h6 className="text-[2.5rem] lg:text-[3rem] xl:text-[4rem] min-[1281px]:text-[4.5rem] font-semibold text-[#112247] md:w-1/2 leading-tight">
+						Payment Links and Invoicing
+					</h6>
+					<p className="text-[1.7rem] font-epilogue text-[#1E1E1E] lg:w-[70%] mt-5">
+						Generate professional invoices and secure payment links, enabling
+						fast and convenient collections for individuals and businesses.
 					</p>
 				</div>
 			</section>
-			<section className="w-full flex flex-col md:flex-row items-center gap-10 px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-24">
-				<div className="w-full md:w-[50%]">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] text-primary font-bold">
-						Flight & Hotel Bookings
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem]">
-						{`Search for flights, compare prices, and book Hotels directly through our platform, all while enjoying access to exclusive deals and discounts from top airlines and hotel chains around the world.`}
-					</p>
-				</div>
-				<div className="w-full md:w-[50%] flex justify-end">
-					<div className="relative">
+			<section className="">
+				<div className="py-20 md:py-40 px-8 md:px-[25px] lg:px-[100px] xl:px-[150px] bg-[#081634] w-full  grid gap-y-12 lg:grid-cols-2">
+					<div className="flex flex-col justify-center md:items-center lg:items-start">
+						<h6 className="text-[3rem] md:text-[4rem] lg:text-[4rem] xl:text-[5rem] font-semibold font-hubot text-white md:text-center lg:text-left">
+							Smart payments in your pocket.
+						</h6>
+						<p className="text-2xl md:text-[1.7rem] text-white md:w-[80%] lg:w-full xl:w-[80%] mt-2 mb-8 md:text-center lg:text-left leading-relaxed">
+							Experience the convenience of seamless payments at your
+							fingertips. Download our mobile app to transfer funds, pay bills,
+							and manage transactions securely, anytime and anywhere.
+						</p>
+						<div className="flex items-center justify-center lg:block">
+							<AppStoreActions />
+						</div>
+					</div>
+					<div className="flex items-center justify-center lg:justify-end xl:justify-center h-full">
 						<Image
-							src={"/flight-booking.png"}
-							width={604}
-							height={559}
+							src={"/ready.png"}
+							width={400}
+							height={400}
+							className="max-w-[80%] md:max-w-full lg:max-w-[60%] xl:max-w-[60%] object-cover"
 							alt="Eldorado"
-							className="rounded-2xl"
 						/>
-						<div className="absolute bottom-[20px] text-center w-full flex flex-col items-center gap-2 xl:gap-5">
-							<p className="text-[4rem] font-bold text-white">Flights</p>
-							<p className="px-12 xl:px-0 text-2xl text-white">
-								Search Flights & Places Hire to our most popular destinations
-							</p>
-							<button className="bg-primary text-2xl text-white rounded-xl w-[144px] h-[50px] flex items-center justify-center gap-5">
-								<FlightIcon /> show flights
-							</button>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section className="w-full flex flex-col lg:flex-row  items-center gap-12 px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-24 bg-[#F9FBFF]">
-				<div className="w-full md:w-[50%]">
-					<Image
-						src={"/bank-sec.png"}
-						width={700}
-						height={447}
-						alt="Eldorado"
-					/>
-				</div>
-				<div className="w-full lg:w-[50%] order-first lg:order-none">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[5rem]  font-bold lg:text-right text-primary">
-						Bank Level Security
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem] lg:text-right">
-						Our platform employs bank-level encryption, multi-factor
-						authentication, and stringent security protocols to safeguard your
-						privacy and ensure that your funds remain safe and secure at all
-						times.
-					</p>
-				</div>
-			</section>
-			<section className="w-full flex flex-col lg:flex-row items-center gap-12 px-5 md:px-10 lg:px-12 xl:px-20 py-12 md:py-24 bg-[#F9FBFF]">
-				<div className="w-full lg:w-[50%]">
-					<h3 className="text-[3rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem]  font-bold  text-primary">
-						24/7 Customer Support
-					</h3>
-					<p className="text-[1.5rem] md:text-[2rem] xl:text-[2.4rem]">
-						Need assistance or have questions? Our dedicated customer support
-						team is available around the clock to provide prompt and
-						personalized assistance. Whether you need help navigating the
-						platform, resolving a transaction issue, or booking travel
-						arrangements, our team is here to help you every step of the way.
-					</p>
-				</div>
-				<div className="w-full md:w-[50%]">
-					<Image
-						src={"/247-support.png"}
-						width={700}
-						height={447}
-						alt="Eldorado"
-					/>
-				</div>
-			</section>
-			<section className="bg-[#253348] py-24 flex flex-col items-center gap-y-10">
-				<h6 className="text-[3rem] md:text-[5rem] font-bold text-white">
-					APP COMING SOON!!!
-				</h6>
-				<div className="flex flex-col md:flex-row items-center justify-center gap-10">
-					<div className="border-white border-[1.5px] rounded-lg flex  items-center justify-center gap-5 h-[70px] w-[270px]">
-						<AppleIcon width={35} height={40} />
-						<div className="flex flex-col gap-y-1 text-xl text-white">
-							<span>COMING SOON ON</span>
-							<span className="text-2xl text-white">App Store</span>
-						</div>
-					</div>
-					<div className="border-white border-[1.5px] rounded-lg flex items-center justify-center gap-5 h-[70px] w-[270px]">
-						<GooglePlayStore />
-						<div className="flex flex-col gap-y-1 text-xl text-white">
-							<span>COMING SOON ON</span>
-							<span className="text-2xl text-white">Google Play Store</span>
-						</div>
 					</div>
 				</div>
 			</section>

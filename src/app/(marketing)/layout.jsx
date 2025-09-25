@@ -1,11 +1,11 @@
-import { Poppins, Montserrat } from "next/font/google";
+import { Poppins, Montserrat, Geist } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import Script from "next/script";
 import "@/app/globals.css";
 import Footer from "@/components/page-components/marketing/Footer";
 import Header from "@/components/page-components/marketing/Header";
 
-const poppins = Poppins({
+const poppins = Geist({
 	subsets: ["latin"],
 	display: "swap",
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -35,7 +35,7 @@ export default async function RootLayout({ children }) {
 		<html lang="en">
 			<body
 				id="body"
-				className={` ${poppins.variable} ${montserrat.variable}  font-poppins text-customBlackB`}>
+				className={` ${poppins.variable}   font-poppins text-customBlackB`}>
 				<Script src="/bodymovin.js" defer />
 				<NextTopLoader
 					color="#0F70DA"

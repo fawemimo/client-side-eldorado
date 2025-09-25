@@ -33,13 +33,13 @@ export default function Header() {
 					}`}>
 					Home
 				</Link>
-				<Link
+				{/* <Link
 					href="/services"
 					className={`text-[1.6rem]  ${
 						isServices ? "text-accent font-semibold" : "text-white font-normal"
 					}`}>
 					Services
-				</Link>
+				</Link> */}
 				<Link
 					href="/faq"
 					className={`text-[1.6rem]  ${
